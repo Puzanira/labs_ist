@@ -30,7 +30,6 @@ const getMostPopularFriend = () => {
                         mostPopularFriendID = friend;
 
                         mostPopularFriendSpan.text(`${mostPopularFriendID} с количеством друзей ${mostPopularFriendsCount}`).show();
-                        mostPopularFriendSpan.style.display = "block";
                     }
                 });
             });
@@ -63,7 +62,6 @@ const getMostPopularFriendCallback = () => {
             mostPopularFriendID = currentFriendID;
 
             mostPopularFriendSpan.text(`${mostPopularFriendID} с количеством друзей ${mostPopularFriendsCount}`).show();
-            mostPopularFriendSpan.style.display = "block";
         }
     };
 
