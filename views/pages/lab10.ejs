@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <%- include ../partials/header %>
+    </head>
+    <body id="body">
+    <header>
+        <%- include ../partials/nav %>
+    </header>
+
+    <main class="container pt-5">
+        <h1>Лабораторная 10: Трансляция сообщений из Telegram в VK</h1>
+
+        <div class="card mt-4">
+            <div class="card-body">
+                <h5 class="card-title">Задание</h5>
+                <h6 class="card-subtitle mb-2 text-muted">@sgnlab10_bot</h6>
+                <h6 class="card-subtitle mb-2 text-muted">
+                    <a href="https://vk.com/inkpie" target="_blank" rel="noreferrer noopener">
+                        Страница Пузановой Ирины
+                    </a>
+                </h6>
+                <p class="card-text">
+                    Принять текстовое сообщение от собеседника бота. Отправить его в социальную сеть
+                    вконтакте. Поставить в статус.
+                </p>
+
+                <button type="button" class="btn btn-primary mr-5" data-toggle="modal" data-target="#exampleModal">
+                    Проверить работу
+                </button>
+                <a
+                        href="https://replit.com/@Puzanira/lab10telegrambot#main.py"
+                        rel="noreferrer noopener"
+                        class="card-link"
+                        target="_blank"
+                >
+                    Посмотреть код
+                </a>
+            </div>
+        </div>
+
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Как проверить:</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                            Откройте телеграм, найдите бота <strong>@sgnlab10_bot</strong>. Напишите ему любое сообщение.
+                            Проверьте новый статус на странице.
+                        </p>
+                        <h6 class="card-subtitle mb-2 text-muted">
+                            <a href="https://vk.com/inkpie" target="_blank" rel="noreferrer noopener">
+                                Страница Пузановой Ирины
+                            </a>
+                        </h6>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Ок</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    </body>
+</html>

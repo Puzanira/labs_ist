@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <%- include ../partials/header %>
+    </head>
+
+    <body>
+        <header>
+            <%- include ../partials/nav %>
+        </header>
+
+        <main class="container pt-5">
+
+            <h1>Авторизация ВК</h1>
+            <form id="auth">
+                <label for="clientInput">Client Id</label>
+                <input id="clientInput" type="text" placeholder="CLIENT ID" value="<%= CLIENT_ID %>">
+                <input type="submit" value="Получить токен">
+            </form>
+
+            <p>Вставьте токен в форму ниже</p>
+            <form class="mb-2" id="token">
+                <label for="tokenInput">Token</label>
+                <input id="tokenInput" type="text" placeholder="ACCESS TOKEN">
+                <input type="submit" value="Авторизовать">
+            </form>
+            <span style="display: none;" class="alert alert-primary"></span>
+
+        </main>
+
+        <script src="javascripts/api.js" type="text/javascript"></script>
+        <script>
+            $("#auth").submit(function(event) {
+                event.preventDefault();
+
+                const clientID = $("#clientInput").val();
+
+                if (clientID) {
+                    const params = {
+                        client_id: clientID,
+                        display: 'page',
+                        scope: 'groups,wall,friends,offline',
+                        response_type: 'token',
+                    };
+                    const url = `https://oauth.vk.com/authorize?${buildQuery(params)}`;
+
+                    const a = document.createElement('a');
+                    a.href = url;
+                    a.setAttribute('target', '_blank');
+                    a.setAttribute('rel', 'noopener norefferer')
+                    a.click();
+
+                    // window.location.replace(url);
+                }
+            });
+
+            $("#token").submit(function(event) {
+                event.preventDefault();
+
+                const token = $("#tokenInput").val();
+
+                if (token) {
+                    $.get(`login/vk/complete?access_token=${token}`, () => {
+                        alert('Авторизация прошла успешно');
+
+                        const messageSpan = $("span");
+                        messageSpan.text("Авторизация прошла успешно").show();
+                        messageSpan.style.display = "block";
+                        window.location.replace("/");
+                    });
+                }
+            });
+        </script>
+    </body>
+</html>

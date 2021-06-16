@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <%- include ../partials/header %>
+</head>
+<body>
+    <header>
+        <%- include ../partials/nav %>
+    </header>
+
+    <main class="container pt-5">
+        <h1>Лабораторная 1-2: xml-документ</h1>
+
+        <div class="card mt-4">
+            <div class="card-body">
+                <h5 class="card-title">Лабораторная 1: Задание</h5>
+                <p class="card-text">
+                    Создать xml файл валидной разметки с вложенностью не менее трёх уровней.
+                    Количество различных элементов второго уровня должно быть не менее двух.
+                    Количество различных элементов третьего уровня должно быть не менее четырёх.
+                    Тематика xml файла произвольная. Для каждого элемента первого уровня
+                    предусмотреть не менее 3 экземпляров, для каждого элемента последующих уровней
+                    – не менее двух экземпляров.
+                </p>
+                <div class="card mb-5"><pre><code><span id="xmlcode"></span></code></pre></div>
+            </div>
+        </div>
+
+        <div class="card mt-4 mb-5">
+            <div class="card-body">
+                <h5 class="card-title">Лабораторная 2: Задание</h5>
+                <p class="card-text">
+                    Создать HTML страницу с встроенным скриптом, который будет обрабатывать
+                    выданный вам XML файл. Вам необходимо вывести на экран все элементы третьего,
+                    последнего уровня вложенности одного из элементов второго уровня.
+                </p>
+                <div>
+                    <b>Заголовок:</b> <span id="title"></span><br />
+                    <b>Ссылка:</b> <span id="url"></span><br />
+                    <b>Текст:</b> <span id="text"></span>
+                </div>
+                <a
+                        style="display: block;"
+                        href="https://replit.com/@Puzanira/lab8telegramot#main.py"
+                        rel="noreferrer noopener"
+                        class="card-link mt-4"
+                        target="_blank"
+                >
+                    Посмотреть код
+                </a>
+            </div>
+        </div>
+
+
+        <script src="javascripts/lab2.js" type="text/javascript"></script>
+    </main>
+    </body>
+</html>

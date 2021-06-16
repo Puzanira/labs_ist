@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<journal>
+    <main-title>Блог любимых одноклассников</main-title>
+    <issues-list>
+        <issue index="1">
+            <maintitle>Физкультура</maintitle>
+            <date>12.09.98</date>
+            <about>Вспоминаем физкультуру</about>
+            <home-url>www.j.ru/issues/sport</home-url>
+            <articles>
+                <article published="true" authorID="1">
+                    <title>Последний урок</title>
+                    <url>/article1</url>
+                    <text>Мы все помним наш последний урок физкультуры, это было как вчера</text>
+                </article>
+                <article published="true" authorID="3">
+                    <title>Волейбол</title>
+                    <url>/article2</url>
+                    <text>Команды волейбола формировались так:</text>
+                </article>
+                <article published="true" authorID="3">
+                    <title>Ольга Борисовна</title>
+                    <url>/article3</url>
+                    <text>Вспоминаем нашего преподавателя</text>
+                </article>
+            </articles>
+        </issue>
+    </issues-list>
+    <authors-list>
+        <author ID="1">
+            <firstname>Ivan</firstname>
+            <lastname>Petrov</lastname>
+            <email>vanya@r.ru</email>
+        </author>
+        <author ID="3">
+            <firstname>Petr</firstname>
+            <lastname>Ivanov</lastname>
+            <email>petr@r.ru</email>
+        </author>
+        <author ID="4">
+            <firstname>Sidor</firstname>
+            <lastname>Sidorov</lastname>
+            <email>sidor@r.ru</email>
+        </author>
+    </authors-list>
+</journal>

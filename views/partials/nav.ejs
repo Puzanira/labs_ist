@@ -1,0 +1,16 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="/">Лабраторные Пузановой СГН3-62Б</a>
+    <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+            <a class="nav-link" href="/">Главная</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/auth">Авторизоваться</a>
+        </li>
+        <% if (locals.accessToken) { %>
+            <li class="nav-item d-flex justify-content-center align-items-center">
+                (Вы авторизованы!)
+            </li>
+        <% } %>
+    </ul>
+</nav>
