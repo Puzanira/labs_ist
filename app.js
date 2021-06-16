@@ -1,3 +1,4 @@
+const serverless = require('serverless-http');
 const createError = require('http-errors');
 const express = require('express');
 const { v4: uuidv4 } = require('uuid');
@@ -5,7 +6,6 @@ const session = require('express-session');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
-const serverless = require('serverless-http');
 
 require('dotenv').config();
 
