@@ -5,6 +5,7 @@ const session = require('express-session');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
+const serverless = require('serverless-http');
 
 require('dotenv').config();
 
@@ -61,3 +62,4 @@ app.use((err, req, res, next) => {
 });
 
 module.exports = app;
+module.exports.handler = serverless(app);
