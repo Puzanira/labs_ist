@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "build": "netlify-lambda build express",
+    "build": "netlify-lambda build .",
     "start": "nodemon server-local.js"
   },
   "dependencies": {
