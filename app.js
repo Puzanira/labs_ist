@@ -23,6 +23,8 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use('/.netlify/functions/server', indexRouter);  // path must route to lambda
+
 app.use(session({
   genid: (req) => {
     return uuidv4();
@@ -42,8 +44,6 @@ app.use((req, res, next) => {
 
   next();
 });
-
-app.use('/', indexRouter);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
