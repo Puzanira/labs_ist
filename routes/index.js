@@ -6,6 +6,8 @@ const { authorize, onAuthorized } = require('../helpers/auth');
 
 const CLIENT_ID = process.env.CLIENT_ID || null;
 const TELEGRAM_TOKEN = process.env.TELEGRAM_TOKEN;
+const VK_TOKEN = process.env.ACCESS_TOKEN
+const USER_ID = process.env.USER_ID
 
 const requireAuth = (req, res, next) => {
   if (req.session.accessToken) {
@@ -34,16 +36,16 @@ router.get('/lab2', (req, res) => {
   res.render('pages/lab2', { title: 'Lab 2' });
 });
 
-router.get('/lab3', requireAuth, (req, res) => {
-  res.render('pages/lab3', { title: 'Lab 3' });
+router.get('/lab3', (req, res) => {
+  res.render('pages/lab3', { title: 'Lab 3', accessToken: VK_TOKEN, USER_ID });
 });
 
-router.get('/lab4', requireAuth, (req, res) => {
-  res.render('pages/lab4', { title: 'Lab 4' });
+router.get('/lab4', (req, res) => {
+  res.render('pages/lab4', { title: 'Lab 4', accessToken: VK_TOKEN, USER_ID });
 });
 
-router.get('/lab5', requireAuth, (req, res) => {
-  res.render('pages/lab5', { title: 'Lab 5-6' });
+router.get('/lab5', (req, res) => {
+  res.render('pages/lab5', { title: 'Lab 5-6', accessToken: VK_TOKEN, USER_ID  });
 });
 
 router.get('/lab7', (req, res) => {
