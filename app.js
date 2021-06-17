@@ -1,4 +1,3 @@
-const serverless = require('serverless-http');
 const createError = require('http-errors');
 const express = require('express');
 const { v4: uuidv4 } = require('uuid');
@@ -23,7 +22,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/.netlify/functions/app', indexRouter);  // path must route to lambda
+app.use('/', indexRouter);
 
 app.use(session({
   genid: (req) => {
@@ -62,4 +61,3 @@ app.use((err, req, res, next) => {
 });
 
 module.exports = app;
-module.exports.handler = serverless(app);
