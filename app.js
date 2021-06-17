@@ -23,7 +23,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/.netlify/functions/server', indexRouter);  // path must route to lambda
+app.use('/.netlify/functions/app', indexRouter);  // path must route to lambda
 app.use('/', indexRouter);
 
 app.use(session({
